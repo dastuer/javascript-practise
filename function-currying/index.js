@@ -10,7 +10,7 @@ const curringFuncParams = 4;
 function currying(fn,...args1){
     return function (...args2){
         const combine = [...args2, ...args1];
-        return combine.length>=curringFuncParams ? fn(...combine) : currying(fn, ...combine);
+        return combine.length >= curringFuncParams ? fn(...combine) : currying(fn, ...combine);
     }
 
 }
